@@ -1,22 +1,22 @@
-﻿name: 'Smart csproj Version Grabber'
-description: 'Automatically finds .sln or .csproj and extracts the version for CI/CD'
+name: 'Smart csproj Version Grabber'
+description: 'Smartly finds .sln or .csproj files and extracts version for CI/CD workflows.'
 author: 'Raycynix'
 
-branding: 
+branding:
   icon: 'package'
   color: 'gray-dark'
-  
-inputs: 
+
+inputs:
   path:
-    description: "Manual path to .csproj file. If not provided searching in .sln or root."
+    description: 'Manual path to .csproj file. If not provided, searches in .sln or root.'
     required: false
     default: ''
 
-outputs: 
+outputs:
   version:
-    description: 'The version extracted from project file'
+    description: 'The version extracted from the project file.'
   project_path:
-    description: 'The actual path to the .csproj file that was used'
+    description: 'The actual path to the .csproj file used.'
 
 runs:
   using: 'node20'
