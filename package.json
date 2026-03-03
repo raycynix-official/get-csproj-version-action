@@ -1,0 +1,24 @@
+{
+  "name": "get-csproj-version-action",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build ./src/main.ts -o dist -m -s --license licenses.txt",
+    "format": "prettier --write **/*.ts",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [],
+  "author": "IruNil <irunil@raycynix.com>",
+  "publisher": "Raycynix",
+  "license": "MIT",
+  "description": "Automatically finds .sln or .csproj and extracts the version for CI/CD",
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "@vercel/ncc": "^0.38.4",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  }
+}

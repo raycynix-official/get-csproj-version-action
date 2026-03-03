@@ -1,0 +1,23 @@
+﻿name: 'Smart csproj Version Grabber'
+description: 'Automatically finds .sln or .csproj and extracts the version for CI/CD'
+author: 'Raycynix'
+
+branding: 
+  icon: 'package'
+  color: 'gray-dark'
+  
+inputs: 
+  path:
+    description: "Manual path to .csproj file. If not provided searching in .sln or root."
+    required: false
+    default: ''
+
+outputs: 
+  version:
+    description: 'The version extracted from project file'
+  project_path:
+    description: 'The actual path to the .csproj file that was used'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
