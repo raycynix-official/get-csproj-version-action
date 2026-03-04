@@ -7,7 +7,6 @@
 </div>
 
 A lightweight, high-performance GitHub Action that intelligently finds your `.csproj` and extracts its version.
-Developed and maintained by **Raycynix**.
 
 ## Why Raycynix Version Grabber?
 
@@ -16,6 +15,9 @@ Unlike other "dumb" version extractors, this action follows a smart discovery lo
 1. **Manual Path:** Uses the path you provide (optional).
 2. **Solution Discovery:** If no path is given, it finds the `.sln` file and picks the first project defined in it.
 3. **Root Discovery:** If no solution is found, it grabs any `.csproj` in the root directory.
+
+> [!IMPORTANT]
+> If you have **multiple projects**, providing a manual path is `recommended`.
 
 ## Usage
 
@@ -48,4 +50,4 @@ Unlike other "dumb" version extractors, this action follows a smart discovery lo
 
 This project is licensed under the [MIT License](https://github.com/Raycynix/get-csproj-version-action/blob/release/LICENSE).
 _____
-<div align="center">Created with ❤️ by Raycynix</div>>
+<div align="center"> Created with ❤️ by <b>Raycynix</b></div>
