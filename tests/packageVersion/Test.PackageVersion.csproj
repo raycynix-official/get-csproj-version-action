@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageVersion>0.3.0</PackageVersion>
+
+        <Description>Test For Package Version</Description>
+    </PropertyGroup>
+
+</Project>

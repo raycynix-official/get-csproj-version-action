@@ -1,0 +1,65 @@
+﻿name: "Build Tests"
+on:
+  pull_request:
+  push:
+    branches: [ release ]
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Test Auto Detect
+        id: test-auto-detect
+        uses: ./
+
+      - name: Check Test Results
+        run: |
+          echo "Found version${{ steps.test-auto-detect.outputs.version }}"
+          echo "Found version${{ steps.test-auto-detect.outputs.project_path }}"
+
+      - name: Test Assembly Version
+        id: test-assembly
+        uses: ./
+        with:
+          path: './tests/assemblyVersion/Test.AssemblyVersion.csproj'
+
+      - name: Check Test Results
+        run: |
+          echo "Found version${{ steps.test-assembly.outputs.version }}"
+          echo "Found version${{ steps.test-assembly.outputs.project_path }}"
+
+      - name: Test Manual Path
+        id: test-manual-path
+        uses: ./
+        with:
+          path: './tests/manualPath/Test.ManualPath.csproj'
+
+      - name: Check Test Results
+        run: |
+          echo "Found version${{ steps.test-manual-path.outputs.version }}"
+          echo "Found version${{ steps.test-manual-path.outputs.project_path }}"
+
+      - name: Test Package Version
+        id: test-package
+        uses: ./
+        with:
+          path: './tests/packageVersion/Test.PackageVersion.csproj'
+
+      - name: Check Test Results
+        run: |
+          echo "Found version${{ steps.test-package.outputs.version }}"
+          echo "Found version${{ steps.test-package.outputs.project_path }}"
+
+      - name: Test Version
+        id: test-version
+        uses: ./
+        with:
+          path: './tests/version/Test.Version.csproj'
+
+      - name: Check Test Results
+        run: |
+          echo "Found version${{ steps.test-version.outputs.version }}"
+          echo "Found version${{ steps.test-version.outputs.project_path }}"
