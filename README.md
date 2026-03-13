@@ -1,12 +1,14 @@
-﻿# Smart csproj Version Grabber
+﻿<div align="center">
 
-<div align="center">
+# Smart csproj Version Grabber
 
 [![Version](https://img.shields.io/github/package-json/v/Raycynix/get-csproj-version-action?style=for-the-badge)](https://github.com/Raycynix/get-csproj-version-action)
 
 </div>
 
 A lightweight, high-performance GitHub Action that intelligently finds your `.csproj` and extracts its version.
+
+> <div align="center">Developed and Maintained by <b>Raycynix</b> </div>
 
 ## Why Raycynix Version Grabber?
 
