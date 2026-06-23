@@ -2,7 +2,7 @@
 
 # Smart csproj Version Grabber
 
-[![Version](https://img.shields.io/github/package-json/v/Raycynix/get-csproj-version-action?style=for-the-badge)](https://github.com/Raycynix/get-csproj-version-action)
+[![Version](https://img.shields.io/github/package-json/v/Raycynix/get-csproj-version-action?style=for-the-badge)](https://github.com/raycynix-official/get-csproj-version-action)
 
 </div>
 
