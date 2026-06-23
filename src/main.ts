@@ -13,11 +13,6 @@ async function run(): Promise<void> {
         core.setOutput('version', version);
         core.setOutput('project_path', projectPath);
 
-        core.info('------------------------------------------');
-        core.info(`🚀 Version extracted: ${version}`);
-        core.info(`📂 Project used: ${projectPath}`);
-        core.info('------------------------------------------');
-
     } catch (error) {
         if (error instanceof Error) {
             core.setFailed(`[Raycynix Error]: ${error.message}`);

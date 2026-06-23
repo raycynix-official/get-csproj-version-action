@@ -19,5 +19,5 @@ outputs:
     description: 'The actual path to the .csproj file used.'
 
 runs:
-  using: 'node24'
+  using: 'node26'
   main: 'dist/index.js'

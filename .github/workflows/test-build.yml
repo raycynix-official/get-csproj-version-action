@@ -14,13 +14,11 @@ jobs:
       - name: Test Auto Detect
         id: test-auto-detect
         uses: ./
-        with:
-          path: './tests'
 
       - name: Check Test Results
         run: |
-          echo "Found version${{ steps.test-auto-detect.outputs.version }}"
-          echo "Found version${{ steps.test-auto-detect.outputs.project_path }}"
+          echo "Found version ${{ steps.test-auto-detect.outputs.version }}"
+          echo "Found version ${{ steps.test-auto-detect.outputs.project_path }}"
           test "${{ steps.test-auto-detect.outputs.version }}" = "0.1.0"
 
       - name: Test Assembly Version
@@ -31,8 +29,8 @@ jobs:
 
       - name: Check Test Results
         run: |
-          echo "Found version${{ steps.test-assembly.outputs.version }}"
-          echo "Found version${{ steps.test-assembly.outputs.project_path }}"
+          echo "Found version ${{ steps.test-assembly.outputs.version }}"
+          echo "Found version ${{ steps.test-assembly.outputs.project_path }}"
           test "${{ steps.test-assembly.outputs.version }}" = "0.1.0"
 
       - name: Test Manual Path
@@ -43,8 +41,8 @@ jobs:
 
       - name: Check Test Results
         run: |
-          echo "Found version${{ steps.test-manual-path.outputs.version }}"
-          echo "Found version${{ steps.test-manual-path.outputs.project_path }}"
+          echo "Found version ${{ steps.test-manual-path.outputs.version }}"
+          echo "Found version ${{ steps.test-manual-path.outputs.project_path }}"
           test "${{ steps.test-manual-path.outputs.version }}" = "0.2.0"
 
       - name: Test Package Version
@@ -55,8 +53,8 @@ jobs:
 
       - name: Check Test Results
         run: |
-          echo "Found version${{ steps.test-package.outputs.version }}"
-          echo "Found version${{ steps.test-package.outputs.project_path }}"
+          echo "Found version ${{ steps.test-package.outputs.version }}"
+          echo "Found version ${{ steps.test-package.outputs.project_path }}"
           test "${{ steps.test-package.outputs.version }}" = "0.3.0"
 
       - name: Test Version
@@ -67,6 +65,6 @@ jobs:
 
       - name: Check Test Results
         run: |
-          echo "Found version${{ steps.test-version.outputs.version }}"
-          echo "Found version${{ steps.test-version.outputs.project_path }}"
+          echo "Found version ${{ steps.test-version.outputs.version }}"
+          echo "Found version ${{ steps.test-version.outputs.project_path }}"
           test "${{ steps.test-version.outputs.version }}" = "1.2.0"
