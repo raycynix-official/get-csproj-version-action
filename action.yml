@@ -1,5 +1,5 @@
 name: 'Smart csproj Version Grabber'
-description: 'Smartly finds .sln or .csproj files and extracts version for CI/CD workflows.'
+description: 'Finds a .NET project and extracts its version from .csproj or Directory.Build.props.'
 author: 'Raycynix'
 
 branding:
@@ -14,9 +14,9 @@ inputs:
 
 outputs:
   version:
-    description: 'The version extracted from the project file.'
+    description: 'The version extracted from the project or its nearest Directory.Build.props file.'
   project_path:
-    description: 'The actual path to the .csproj file used.'
+    description: 'The path to the selected .csproj file.'
 
 runs:
   using: 'node24'

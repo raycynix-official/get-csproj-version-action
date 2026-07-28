@@ -68,3 +68,15 @@ jobs:
           echo "Found version ${{ steps.test-version.outputs.version }}"
           echo "Found version ${{ steps.test-version.outputs.project_path }}"
           test "${{ steps.test-version.outputs.version }}" = "1.2.0"
+
+      - name: Test Directory.Build.props Version
+        id: test-directory-build-props
+        uses: ./
+        with:
+          path: './tests/directoryBuildProps/src/Test.DirectoryBuildProps.csproj'
+
+      - name: Check Directory.Build.props Test Results
+        run: |
+          echo "Found version ${{ steps.test-directory-build-props.outputs.version }}"
+          echo "Found project ${{ steps.test-directory-build-props.outputs.project_path }}"
+          test "${{ steps.test-directory-build-props.outputs.version }}" = "1.2.0"
